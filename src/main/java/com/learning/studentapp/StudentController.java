@@ -14,4 +14,12 @@ public class StudentController {
     public List<Student> getStudents(){
         return repo.findAll();
     }
+
+    @GetMapping("/add")
+    public void addStudent(){
+        Student s = new Student();
+        s.setName("Hites");
+        s.setAge(20);
+        repo.save(s);
+    }
 }
