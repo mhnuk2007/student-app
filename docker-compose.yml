@@ -4,23 +4,15 @@ services:
   app:
     build: .
     ports:
-      - "8090:8000"
-    networks:
-      - my-network
+      - "8090:8080"
 
   postgres:
     image: postgres:latest
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=0000
-      - POSTGRES_DB=demo
+      POSTGRES_USER: honey
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: demo
     ports:
       - "5433:5432"
-    networks:
-      - my-network
-
-networks:
-  my-network:
-    driver: bridge
 
 
