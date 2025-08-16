@@ -18,7 +18,7 @@ public class StudentController {
     @GetMapping("/add")
     public void addStudent(){
         Student s = new Student();
-        s.setName("Hites");
+        s.setName("Hitesh");
         s.setAge(20);
         repo.save(s);
     }
